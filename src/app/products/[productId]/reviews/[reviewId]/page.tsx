@@ -5,10 +5,9 @@ export default function ReciewDetails({
 }: {
   params: { productId: string; reviewId: string };
 }) {
-  if (parseInt(params.reviewId > 1000)) {
+  if (parseInt(params.reviewId) > 1000) {
     notFound();
   }
-
   return (
     <h1>
       Reviewss {params.reviewId} for products {params.productId}
