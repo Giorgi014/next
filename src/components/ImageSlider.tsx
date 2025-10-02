@@ -4,9 +4,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../global.css";
+import "../global.css";
 
-export default function ClietRoutePage() {
+export const ImageSlider =() => {
   const settings = {
     dots: true,
   };
