@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,15 +16,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header style={{ backgroundColor: "lightblue", padding: "1rem" }}>
-          <p>Header</p>
-        </header>
-        {children}
-        <footer style={{ backgroundColor: "ghostwhite", padding: "1rem" }}>
-          <p>Footer</p>
-        </footer>
-      </body>
+      <ThemeProvider>
+        <body>
+          <header style={{ backgroundColor: "lightblue", padding: "1rem" }}>
+            <p>Header</p>
+          </header>
+          {children}
+          <footer style={{ backgroundColor: "ghostwhite", padding: "1rem" }}>
+            <p>Footer</p>
+          </footer>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
