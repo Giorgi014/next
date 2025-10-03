@@ -1,34 +1,15 @@
 "use client";
 
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../../global.css";
 import { useTheme } from "@/components/theme-provider";
+import { clientSideFunction } from "@/utils/client-utils";
 
 export default function ClietRoutePage() {
   const theme = useTheme();
-  const settings = {
-    dots: true,
-  };
+  const result = clientSideFunction();
   return (
     <div className="image-slider-container">
-      <h1 style={{ color: theme.colors.secondary }}>Client route</h1>
-      <Slider {...settings}>
-        <div>
-          <img src="http://picsum.photos/400/200" />
-        </div>
-        <div>
-          <img src="http://picsum.photos/400/200" />
-        </div>
-        <div>
-          <img src="http://picsum.photos/400/200" />
-        </div>
-        <div>
-          <img src="http://picsum.photos/400/200" />
-        </div>
-      </Slider>
+      <h1 style={{ color: theme.colors.secondary }}>Client route {result}</h1>
     </div>
   );
 }
